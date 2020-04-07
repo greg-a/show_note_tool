@@ -16,7 +16,7 @@
     <img src="./assets/icons/skip-ahead-15-seconds.png" onclick="forward()" id="skip-forward" accesskey="."/>
     <img src="./assets/icons/skip-15-seconds-back.png" onclick="rewind()" id="skip-backward" accesskey=","/>    
     <div class="song-artist">Raps City</div>
-    <div class="song-title">Episode 17</div>
+    <div class="song-title">Episode 18 short</div>
     <!-- Input element for progress bar - min=0 starting value of  
     every song - max length will change per song so leave empty -->
     <input type="range" id="progress-bar" min="0" max="" value="0" onchange="changeProgressBar()"/>
@@ -25,7 +25,10 @@
   </div>
   
   <div id="form-container" class="container">
-    <img src="assets/icons/stamp.png" onclick="stamp()" id="timestamp" class="form-element" accesskey="t"/>
+    <div class="imagewrap">
+      <img src="assets/icons/stamp.png" onclick="stamp()" alt="timestamp" id="timestamp" class="form-element" accesskey="t"/>
+      <span class="timestamptip">Click for timestamp</span>
+    </div>
     <form action="#copy" class="form-element">
       <label for="snote" class="form-element" id="slabel">Stamp Note:</label><br>
       <input type="text" class="form-element" id="snote" name="snote" value=""><br><br>
