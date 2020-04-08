@@ -104,25 +104,49 @@ function changeProgressBar() {
     song.currentTime = progressBar.value;
 };
 
-// hover for timestamp
-let test = document.getElementById("test")
 
 function stopsong() {
     var player = document.getElementById('song');
     player.pause();
-    player.currentTime = 0;/**tried also with audio.currentTime here. Didn't worked **/
+    player.currentTime = 0;
 }
 
 function forward() {
     var player = document.getElementById('song');
-    player.currentTime += 15.0; /**tried also with audio.currentTime here. Didn't worked **/
+    player.currentTime += 15.0;
 
 }
 
 function rewind() {
     var player = document.getElementById('song');
-    player.currentTime -= 15.0; /**tried also with audio.currentTime here. Didn't worked **/
+    player.currentTime -= 15.0;
 
 }
 
+/**copy current timestamp to clipboard **/
+// function stamp() {
+//     /* Get the text field */
+//     var copyText = document.getElementById('ticker')
+  
+//     /* Select the text field */
+//     copyText.select();
+  
+//     /* Copy the text inside the text field */
+//     document.execCommand("copy");
+  
+//     /* Alert the copied text */
+//     alert("Copied the text: " + copyText.value);
+//   } does not work
+
+// adds timestamp note to full timestamp
+function sync()
+{
+  var snote = document.getElementById('snote');
+  var notes = document.getElementById('notes');
+  notes.value = notes.value + snote.value + ' ';
+}
+
+function stamp() {
+    snote.value = snote.value + `(${song.currentTime})`;
+}
 

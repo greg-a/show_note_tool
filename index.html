@@ -20,16 +20,16 @@
     <!-- Input element for progress bar - min=0 starting value of  
     every song - max length will change per song so leave empty -->
     <input type="range" id="progress-bar" min="0" max="" value="0" onchange="changeProgressBar()"/>
-    <div class="currentTime"></div>
+    <div class="currentTime" id="time"></div>
     <div class="durationTime"></div>
   </div>
   
   <div id="form-container" class="container">
-    <div class="imagewrap">
-      <img src="assets/icons/stamp.png" onclick="stamp()" alt="timestamp" id="timestamp" class="form-element" accesskey="t"/>
+    <div class="imagewrap" accesskey="[" onclick="stamp()">
+      <img src="assets/icons/stamp.png" alt="timestamp" id="timestamp" class="form-element" accesskey="c" onclick="sync()" />
       <span class="timestamptip">Click for timestamp</span>
     </div>
-    <form action="#copy" class="form-element">
+    <form class="form-element">
       <label for="snote" class="form-element" id="slabel">Stamp Note:</label><br>
       <input type="text" class="form-element" id="snote" name="snote" value=""><br><br>
       <textarea name="notes" id="notes" rows="8" class="box"></textarea>
