@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 body {
-    background: #000000;
+    /* border: 2px solid white; */
+    width: 1000px;
+    height: 850px;
+    margin: auto;
+    background-image: url(assets/pictures/mosaic.png);
 }
 
 #background {
@@ -9,7 +13,7 @@ body {
     height: 50%;
     width: 50%;
     /* margin: auto; */
-    top: -50px;
+    top: -75px;
     left: 25%;
     /* right: 0; */
     /* bottom: 0; */
@@ -17,23 +21,38 @@ body {
     z-index: -1;
 }
 
+.far {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 2.75em;
+    left: 80%;
+    top: 25%;
+}
+
 /* container for music player */
 .container {
-    position: absolute;
+    position: relative;
+    float: left;
     height: 300pt;
     width: 250pt;
-    /* margin: auto; */
-    top: 30%;
-    left: 10%;
-    right: 0;
-    bottom: 0;
+    left: 15%;
+    top: 35%;
+    margin:2px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000000;
+    background: #000000 transparent(0.5);
     border-radius: 10px;
     box-shadow: 0 0 10px #000000;
+    /* border: 2px solid white; */
+}
+
+#form-container {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
 }
 
 /* container for play, pause, previous track, next track, and progress bar  */
@@ -114,15 +133,6 @@ body {
     z-index: 4;
 }
 
-#form-container {
-    left: 40%;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
-    width: 30%;
-    top: 32%;
-}
-
 #timestamp {
    height: 50px;
    width: 50px;
@@ -149,7 +159,7 @@ body {
 #notes {
     color: rgb(193, 255, 6);
     height: 32%;
-    bottom: 15px;
+    bottom: 0;
 }
 
 .timestamptip {

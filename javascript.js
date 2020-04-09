@@ -139,14 +139,20 @@ function rewind() {
 //   } does not work
 
 // adds timestamp note to full timestamp
+
+
+function stamp() {
+    snote.value = snote.value + `(${song.currentTime})`;
+};
+
 function sync()
 {
   var snote = document.getElementById('snote');
   var notes = document.getElementById('notes');
-  notes.value = notes.value + snote.value + ' ';
-}
+  notes.value = notes.value + snote.value + ', ';
+};
 
-function stamp() {
-    snote.value = snote.value + `(${song.currentTime})`;
+function eraseText() {
+    document.getElementById("snote").value = "";
 }
 
