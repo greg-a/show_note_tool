@@ -23,8 +23,21 @@
       <input type="range" id="progress-bar" min="0" max="" value="0" onchange="changeProgressBar()"/>
       <div class="currentTime" id="time"></div>
       <div class="durationTime"></div>
-    </div>
-    <div id="form-container" class="container">
+      </div>
+
+    <div class="container" id="form-container" >
+      <div class="container" id="shortcuts">
+        <h4>Keyboard Shortcuts [ALT]+[Shift]</h4>
+        <ul class="shortli">
+          <li>Play: [ALT]+[Shift]+P</li>
+          <li>Back 15 Seconds: [ALT]+[Shift]+,</li>
+          <li>Forward 15 Seconds: [ALT]+[Shift]+.</li>
+          <li>Get timestamp: [ALT]+[Shift]+[</li>
+          <li>Add to body: [ALT]+[Shift]+c</li>
+          <li>Add to body: [ALT]+[Shift]+c</li>
+          <li>Add to body: [ALT]+[Shift]+c</li>
+        </ul>
+      </div>
       <div class="imagewrap" accesskey="[" onclick="stamp()">
         <img src="assets/icons/stamp.png" alt="timestamp" id="timestamp" class="form-element" />
         <span class="timestamptip">Click for timestamp</span>
@@ -35,7 +48,11 @@
         <input type="text" class="form-element" id="snote" name="snote" value=""><br><br>
         <textarea name="notes" id="notes" rows="8" class="box"></textarea>
       </form>
+      <i class="far fa-copy"></i>
+      <i class="far fa-trash-alt"></i>
     </div>
+
+    
   <script src="javascript.js"></script>
 </body>
 </html>

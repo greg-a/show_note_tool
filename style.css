@@ -21,23 +21,56 @@ body {
     z-index: -1;
 }
 
-.far {
+.card-header:hover {
+    cursor: pointer;
+}
+
+.blockquote {
+    font-size: 0.75em;
+}
+
+.card-body {
+    visibility: hidden;
+}
+
+#shortcuts {
+    /* border: 2px solid white; */
+    color: rgb(193, 255, 6);
+    font-family: 'Montserrat', sans-serif;
+    font-size: .75em;
+    display:block;
+    height: 138px;
+    left: 0;
+    top: 0;
     position: absolute;
-    width: 50px;
-    height: 50px;
-    font-size: 2.75em;
-    left: 80%;
-    top: 25%;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+    background:none;
+}
+
+ul {
+    margin: 0;
+}
+
+h4 {
+    margin-bottom: 5px;
+    text-align: left;
+    padding-left: 15%;
+}
+
+.far:hover {
+    cursor: pointer;
 }
 
 /* container for music player */
 .container {
     position: relative;
     float: left;
-    height: 300pt;
+    height: 363pt;
     width: 250pt;
     left: 15%;
-    top: 35%;
+    top: 23%;
     margin:2px;
     overflow: hidden;
     display: flex;
@@ -53,6 +86,8 @@ body {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 17px;
+    height: 365pt;
+    top: 23%;
 }
 
 /* container for play, pause, previous track, next track, and progress bar  */
@@ -141,13 +176,38 @@ body {
    position: relative;
 }
 
+.far {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 2.75em;
+    right: 10%;
+    top: 30%;
+}
+
+.fa-copy {
+    top: 55%;
+    left: 10%;
+}
+
+.fa-trash-alt {
+    top: 55%;
+    right: 10%;
+}
+
 .imagewrap {
     height: 50px;
     width: 50px;
     background-color: blanchedalmond;
-    left: 7%;
-    top: 25%;
+    left: 10%;
+    top: 30%;
     position: absolute;
+}
+
+.shortli {
+    text-align: left;
+    font-size: .85em;
+    padding-left: 25%;
 }
 
 #notes, #snote {
@@ -158,8 +218,10 @@ body {
 
 #notes {
     color: rgb(193, 255, 6);
-    height: 32%;
+    height: 29%;
     bottom: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .timestamptip {
