@@ -11,13 +11,11 @@
     <div class="container">
       <div class="box"></div>
       <img src="./assets/pictures/rapscity.png" id="thumbnail" style="transform: scale(1.25);"/>
-      <img src="./assets/icons/play.png" onclick="playPause()" id="play-pause" accesskey="\"/>
-      <img src="./assets/icons/forward.png" onclick="#" id="next-song" />
-      <img src="./assets/icons/backward.png" onclick="#" id="previous-song" />
-      <img src="./assets/icons/skip-ahead-15-seconds.png" onclick="forward()" id="skip-forward" accesskey="."/>
-      <img src="./assets/icons/skip-15-seconds-back.png" onclick="rewind()" id="skip-backward" accesskey=","/>    
+      <img src="./assets/icons/play.png" onclick="playPause()" id="play-pause" accesskey="p"/>
+      <img src="./assets/icons/skip-ahead-15-seconds.png" onclick="forward()" id="skip-forward" accesskey="m"/>
+      <img src="./assets/icons/skip-15-seconds-back.png" onclick="rewind()" id="skip-backward" accesskey="n"/>    
       <div class="song-artist">Raps City</div>
-      <div class="song-title">Episode 18 short</div>
+      <div class="song-title">Needs Show Notes</div>
       <!-- Input element for progress bar - min=0 starting value of  
       every song - max length will change per song so leave empty -->
       <input type="range" id="progress-bar" min="0" max="" value="0" onchange="changeProgressBar()"/>
@@ -27,29 +25,29 @@
 
     <div class="container" id="form-container" >
       <div class="container" id="shortcuts">
-        <h4>Keyboard Shortcuts [ALT]+[Shift]</h4>
+        <h3>Keyboard Shortcuts</h3>
         <ul class="shortli">
-          <li>Play: [ALT]+[Shift]+P</li>
-          <li>Back 15 Seconds: [ALT]+[Shift]+,</li>
-          <li>Forward 15 Seconds: [ALT]+[Shift]+.</li>
-          <li>Get timestamp: [ALT]+[Shift]+[</li>
-          <li>Add to body: [ALT]+[Shift]+c</li>
-          <li>Add to body: [ALT]+[Shift]+c</li>
-          <li>Add to body: [ALT]+[Shift]+c</li>
+          <li>Play: [ALT] + [Shift] + P</li>
+          <li>Back 15 Seconds: [ALT]+[Shift]+N</li>
+          <li>Forward 15 Seconds: [ALT]+[Shift]+M</li>
+          <li>Get Timestamp: [ALT]+[Shift]+U</li>
+          <li>Add Note: [ALT]+[Shift]+J</li>
+          <li>Copy Notes: [ALT]+[Shift]+C</li>
+          <li>Delete Notes: [ALT]+[Shift]+T</li>
         </ul>
       </div>
-      <div class="imagewrap" accesskey="[" onclick="stamp()">
+      <div class="imagewrap" accesskey="u" onclick="stamp()">
         <img src="assets/icons/stamp.png" alt="timestamp" id="timestamp" class="form-element" />
         <span class="timestamptip">Click for timestamp</span>
       </div>
-      <i class="far fa-plus-square form-element" accesskey="c" onclick="sync();eraseText()"></i>
+      <i class="far fa-plus-square form-element" accesskey="j" onclick="sync();eraseText()"></i>
       <form class="form-element">
         <label for="snote" class="form-element" id="slabel">Stamp Note:</label><br>
         <input type="text" class="form-element" id="snote" name="snote" value=""><br><br>
         <textarea name="notes" id="notes" rows="8" class="box"></textarea>
       </form>
-      <i class="far fa-copy"></i>
-      <i class="far fa-trash-alt"></i>
+      <i class="far fa-copy" id="copybutton" accesskey="c" onclick="copynotes()"></i>
+      <i class="far fa-trash-alt" accesskey="t" onclick="erasenotes()"></i>
     </div>
 
     

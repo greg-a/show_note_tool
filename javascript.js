@@ -7,12 +7,6 @@ const songTitle = document.querySelector('.song-title'); // element where track 
 const progressBar = document.querySelector('#progress-bar'); // element where progress bar appears
 let pPause = document.querySelector('#play-pause'); // element where play and pause image appears
 
-songIndex = 0;
-songs = ['./assets/music/beyonce.mp3', './assets/music/dontstartnow.mp3']; // object storing paths for audio objects
-thumbnails = ['./assets/images/lemonade.png', './assets/images/dontstartnow.png']; // object storing paths for album covers and backgrounds
-songArtists = ['Beyonce', 'Dua Lipa']; // object storing track artists
-songTitles = ["Don't Hurt Yourself", "Don't Start Now"]; // object storing track titles
-
 // function where pp (play-pause) element changes based on playing boolean value - if play button clicked, change pp.src to pause button and call song.play() and vice versa.
 let playing = true;
 function playPause() {
@@ -138,11 +132,9 @@ function rewind() {
 //     alert("Copied the text: " + copyText.value);
 //   } does not work
 
-// adds timestamp note to full timestamp
-
-
+// adds timestamp note to notes
 function stamp() {
-    snote.value = snote.value + `(${song.currentTime})`;
+    snote.value = snote.value + `(${(formatTime(Math.floor(song.currentTime)))})`;
 };
 
 function sync()
@@ -155,4 +147,15 @@ function sync()
 function eraseText() {
     document.getElementById("snote").value = "";
 }
+
+function erasenotes() {
+    document.getElementById("notes").value = "";
+}
+
+function copynotes() {
+    var copyText = document.getElementById("notes");
+    copyText.select();
+    document.execCommand("copy");
+}
+
 
