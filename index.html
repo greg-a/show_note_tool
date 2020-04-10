@@ -3,7 +3,8 @@
 <head>
   <title>Show Note Editor</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/46ae4d5caa.js" crossorigin="anonymous"></script>  
+  <script src="https://kit.fontawesome.com/46ae4d5caa.js" crossorigin="anonymous"></script> 
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">  
 </head>
 <body>
   <img src="assets/pictures/PodcastCrafter-Logo-Light-3.png" id="background" />
@@ -15,7 +16,7 @@
       <img src="./assets/icons/skip-ahead-15-seconds.png" onclick="forward()" id="skip-forward" accesskey="m"/>
       <img src="./assets/icons/skip-15-seconds-back.png" onclick="rewind()" id="skip-backward" accesskey="n"/>    
       <div class="song-artist">Raps City</div>
-      <div class="song-title">Needs Show Notes</div>
+      <div class="song-title">NeedShowNotes.mp3</div>
       <!-- Input element for progress bar - min=0 starting value of  
       every song - max length will change per song so leave empty -->
       <input type="range" id="progress-bar" min="0" max="" value="0" onchange="changeProgressBar()"/>
@@ -25,9 +26,9 @@
 
     <div class="container" id="form-container" >
       <div class="container" id="shortcuts">
-        <h3>Keyboard Shortcuts</h3>
+        <h3>Keyboard Shortcuts (Firefox)</h3>
         <ul class="shortli">
-          <li>Play: [ALT] + [Shift] + P</li>
+          <li>Play/Pause: [ALT] + [Shift] + P</li>
           <li>Back 15 Seconds: [ALT]+[Shift]+N</li>
           <li>Forward 15 Seconds: [ALT]+[Shift]+M</li>
           <li>Get Timestamp: [ALT]+[Shift]+U</li>
@@ -44,7 +45,7 @@
       <form class="form-element">
         <label for="snote" class="form-element" id="slabel">Stamp Note:</label><br>
         <input type="text" class="form-element" id="snote" name="snote" value=""><br><br>
-        <textarea name="notes" id="notes" rows="8" class="box"></textarea>
+        <textarea name="notes" id="notes"></textarea>
       </form>
       <i class="far fa-copy" id="copybutton" accesskey="c" onclick="copynotes()"></i>
       <i class="far fa-trash-alt" accesskey="t" onclick="erasenotes()"></i>
